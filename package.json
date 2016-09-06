@@ -1,7 +1,7 @@
 {
   "name": "metalsmith-etsy",
-  "version": "0.0.1",
-  "description": "A small plugin for Metalsmith to incorporate your Etsy store into your website.",
+  "version": "0.0.2",
+  "description": "A small plugin for Metalsmith to incorporate your Etsy store into your static website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/selfVSmind/metalsmith-etsy/issues"
   },
-  "homepage": "https://github.com/selfVSmind/metalsmith-etsy#readme"
+  "homepage": "https://github.com/selfVSmind/metalsmith-etsy#readme",
+  "devDependencies": {
+    "get-json": "0.0.3",
+    "sync-request": "^3.0.1"
+  }
 }
