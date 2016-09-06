@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-etsy",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A small plugin for Metalsmith to incorporate your Etsy store into your static website.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "metalsmith",
     "etsy"
   ],
-  "author": "Jason Lambert <pitbullent@gmail.com> (jasonlambert.io)",
+  "author": "Jason Lambert <pitbullent@gmail.com> (http://jasonlambert.io)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/selfVSmind/metalsmith-etsy/issues"
@@ -22,7 +22,6 @@
   "homepage": "https://github.com/selfVSmind/metalsmith-etsy#readme",
   "devDependencies": {},
   "dependencies": {
-    "get-json": "0.0.3",
     "sync-request": "^3.0.1"
   }
 }
