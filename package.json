@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-etsy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small plugin for Metalsmith to incorporate your Etsy store into your static website.",
   "main": "index.js",
   "scripts": {

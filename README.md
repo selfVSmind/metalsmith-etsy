@@ -46,4 +46,4 @@ Metalsmith(__dirname)
 ```
 
 ## Better Documentation Coming
-For now read about this [on my blog][http://jasonlambert.io/articles/metalsmith-etsy/]
+For now read about this [on my blog](http://jasonlambert.io/articles/metalsmith-etsy/)
