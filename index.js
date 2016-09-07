@@ -5,11 +5,12 @@ var request = require('sync-request');
 module.exports = function (options) {
     
     // if my_etsy_api_key or my_etsy_shop_name is not supplied, we can't do anything!
-    if(!options.hasOwnProperty('api_key') || !options.hasOwnProperty('etsy_shop')) return function(files, metalsmith, done) {    done();    };
+    if(!options.hasOwnProperty('api_key') || !options.hasOwnProperty('etsy_shop') || !options.hasOwnProperty('listing_template')) return function(files, metalsmith, done) {    done();    };
 
-    // these two variables must be supplied by user
+    // these three variables must be supplied by user
     var my_etsy_api_key = options.api_key
     var my_etsy_shop_name = options.etsy_shop
+    var listing_template = options.listing_template
 
     // setting this to false GREATLY speeds things up but most people will want the images
     // however I recommend setting as false during testing phases
@@ -48,9 +49,9 @@ module.exports = function (options) {
             // We're creating a virtual markdown file that the other Metalsmith plugins can manipulate!!
             // When doing this sort of thing DO NOT FORGET the contents variable.. It is required by the Metalsmith environment
             // Also note that we're using a Handlebars template named listing that we will define next
-            files[workingFile] = {title: listing.title, contents: listing.description, etsy_link: listing.url, template: 'listing.hbt'}
+            files[workingFile] = {title: listing.title, contents: listing.description, etsy_link: listing.url, template: listing_template}
 
-            // set to false during testing phases because etsy requires a new request for every single listing and this takes a very long time
+            // set get_images to false during testing phases because etsy requires a new request for every single listing and this takes a very long time
             if(get_images) {
                 // let's grab all of the images for the listing
                 // etsy api requires that you do this in a seperate request

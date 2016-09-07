@@ -1,6 +1,9 @@
 # metalsmith-etsy
 A small plugin for Metalsmith to incorporate your Etsy store into your static website.
 
+## Consider the Boilerplate Option
+I've set up a [boilerplate project](https://github.com/selfVSmind/metalsmith-etsy-boilerplate) to get you jumpstarted.
+
 ## Installation
     $ npm install --save metalsmith-etsy
 
@@ -16,7 +19,8 @@ var Metalsmith = require('metalsmith'),
 Metalsmith(__dirname)
     .use(etsy({
         api_key: <your_etsy_api_key>,
-        etsy_shop  : 'StickToThePlannerCOM'
+        etsy_shop: 'StickToThePlannerCOM',
+        listing_template: 'listing.hbt'
     }))
     .use(collections({
         pages: {
